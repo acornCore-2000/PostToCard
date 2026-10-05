@@ -1,0 +1,759 @@
+.postCard__light,
+
+.postCard__dark {
+
+  --pc-padding: 15px;
+
+  width: 375px;
+
+  max-width: 100%;
+
+  box-sizing: border-box;
+
+  padding: var(--pc-padding);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  border-radius: 0;
+
+  overflow: hidden;
+
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+
+  backdrop-filter: blur(24px) saturate(180%);
+
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+}
+
+.postCard__light {
+
+  background: #f2f2f7;
+
+  color: #1c1c1e;
+
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 6px 20px rgba(0, 0, 0, 0.06);
+
+}
+
+.postCard__dark {
+
+  background: #1c1c1e;
+
+  color: #f5f5f7;
+
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    0 6px 20px rgba(0, 0, 0, 0.28);
+
+}
+
+.header__light,
+
+.header__dark {
+
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+
+  min-width: 0;
+
+  gap: 10px;
+
+}
+
+.avatar__light,
+
+.avatar__dark {
+
+  width: 42px;
+
+  height: 42px;
+
+  flex: 0 0 42px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  display: block;
+
+}
+
+.avatar__light {
+
+  background: #d1d1d6;
+
+}
+
+.avatar__dark {
+
+  background: #3a3a3c;
+
+}
+
+.authorInfo__light,
+
+.authorInfo__dark {
+
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 1px;
+
+}
+
+.author__light,
+
+.author__dark {
+
+  display: block;
+
+  min-width: 0;
+
+  font-family: "Inter", "Noto Color Emoji",  sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 650;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.01em;
+
+  white-space: normal;
+
+  overflow: visible;
+
+  text-overflow: unset;
+
+  overflow-wrap: anywhere;
+
+}
+
+.verifiedBadge__government__light,
+
+.verifiedBadge__government__dark,
+
+.verifiedBadge__individual__light,
+
+.verifiedBadge__individual__dark {
+
+  width: 15px;
+
+  height: 15px;
+
+  display: inline-block;
+
+  vertical-align: -2px;
+
+  margin-left: 4px;
+
+}
+
+.verifiedBadge__government__light {
+
+  color: #8e8e93 !important;
+
+  fill: #8e8e93 !important;
+
+}
+
+.verifiedBadge__government__dark {
+
+  color: #98989d !important;
+
+  fill: #98989d !important;
+
+}
+
+.verifiedBadge__individual__light,
+
+.verifiedBadge__individual__dark {
+
+  color: #007aff !important;
+
+  fill: #007aff !important;
+
+}
+
+.screenName__light,
+
+.screenName__dark {
+
+  font-family: "Inter", "Noto Color Emoji", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  line-height: 1.3;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+}
+
+.screenName__light {
+
+  color: #8e8e93;
+
+}
+
+.screenName__dark {
+
+  color: #98989d;
+
+}
+
+.qrcode__light,
+
+.qrcode__dark {
+
+  width: 48px;
+
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  margin-left: 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+}
+
+.qrcode__light svg,
+
+.qrcode__dark svg {
+
+  width: 48px !important;
+
+  height: 48px !important;
+
+  display: block;
+
+}
+
+.qrcode__light {
+
+  color: #8e8e93;
+
+}
+
+.qrcode__dark {
+
+  color: #f5f5f7;
+
+}
+
+.text__light,
+
+.text__dark {
+
+  margin: 0;
+
+  font-size: 15px;
+
+  line-height: 1.55;
+
+  letter-spacing: -0.01em;
+
+  white-space: pre-wrap;
+
+  word-break: break-word;
+
+}
+
+.text__light[lang="fa"],
+
+.text__light[lang="ar"],
+
+.text__dark[lang="ar"],
+
+.text__dark[lang="fa"] {
+
+  font-family: "Vazirmatn", "Noto Color Emoji", sans-serif;
+
+  direction: rtl;
+
+  text-align: right;
+
+}
+
+.text__light[lang="en"],
+
+.text__dark[lang="en"] {
+
+  font-family: "Inter", "Noto Color Emoji", sans-serif;
+
+  direction: ltr;
+
+  text-align: left;
+
+}
+
+.link {
+
+  color: #007aff;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+}
+
+.link:hover {
+
+  text-decoration: underline;
+
+}
+
+.more__light,
+
+.more__dark {
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  color: #8e8e93;
+
+ 
+
+  user-select: none;
+
+}
+
+.image__light,
+
+.image__dark {
+
+  width: 100%;
+
+  max-width: 100%;
+
+  max-height: 260px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 5px;
+
+  margin-top: 1px;
+
+}
+
+.image__light {
+
+  background: #e5e5ea;
+
+}
+
+.image__dark {
+
+  background: #3a3a3c;
+
+}
+
+.stats__light,
+
+.stats__dark {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 9px 2px;
+
+  margin-top: 1px;
+
+  border-top: 1px solid;
+
+  border-bottom: 1px solid;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  gap: 5px;
+
+}
+
+.stats__light {
+
+  border-color: rgba(60, 60, 67, 0.16);
+
+}
+
+.stats__dark {
+
+  border-color: rgba(235, 235, 245, 0.12);
+
+}
+
+.stat__light,
+
+.stat__dark {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  min-width: 0;
+
+  white-space: nowrap;
+
+  font-family: "Inter", "Noto Color Emoji", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+}
+
+.stat__light {
+
+  color: #8e8e93;
+
+}
+
+.stat__dark {
+
+  color: #98989d;
+
+}
+
+.stat__light svg,
+
+.stat__dark svg {
+
+  width: 13px;
+
+  height: 13px;
+
+  flex: 0 0 auto;
+
+  opacity: 0.95;
+
+}
+
+.statLikes__light svg,
+
+.statLikes__dark svg {
+
+  color: #8e8e93;
+
+}
+
+.statReplies__light svg,
+
+.statReplies__dark svg {
+
+  color: #8e8e93;
+
+}
+
+.statReposts__light svg,
+
+.statReposts__dark svg {
+
+  color: #8e8e93;
+
+}
+
+.statViews__light svg,
+
+.statViews__dark svg {
+
+  color: #8e8e93;
+
+}
+
+.footer__light,
+
+.footer__dark {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 18px;
+
+}
+
+.date__light,
+
+.date__dark {
+
+  font-family: "Inter", "Noto Color Emoji", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  line-height: 1.3;
+
+}
+
+.date__light {
+
+  color: #8e8e93;
+
+}
+
+.date__dark {
+
+  color: #98989d;
+
+}
+
+.logo__light,
+
+.logo__dark {
+
+  width: 17px;
+
+  height: 17px;
+
+  flex: 0 0 auto;
+
+  opacity: 0.9;
+
+}
+
+.logo__light {
+
+  color: #8e8e93;
+
+}
+
+.logo__dark {
+
+  color: #f5f5f7;
+
+}
+
+@media (max-width: 430px) {
+
+  .postCard__light,
+
+  .postCard__dark {
+
+    width: 100%;
+
+    max-width: 100%;
+
+    border-radius: 0;
+
+    padding: 14px;
+
+  }
+
+  .text__light,
+
+  .text__dark {
+
+    font-size: 15px;
+
+  }
+
+  .image__light,
+
+  .image__dark {
+
+    max-height: 240px;
+
+  }
+
+}
+
+@media (max-width: 340px) {
+
+  .postCard__light,
+
+  .postCard__dark {
+
+    padding: 12px;
+
+    border-radius: 0;
+
+    gap: 9px;
+
+  }
+
+  .avatar__light,
+
+  .avatar__dark {
+
+    width: 38px;
+
+    height: 38px;
+
+    flex-basis: 38px;
+
+  }
+
+  .author__light,
+
+  .author__dark {
+
+    font-size: 14px;
+
+  }
+
+  .screenName__light,
+
+  .screenName__dark {
+
+    font-size: 12px;
+
+  }
+
+  .text__light,
+
+  .text__dark {
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+  }
+
+  .stats__light,
+
+  .stats__dark {
+
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+
+    row-gap: 7px;
+
+    column-gap: 14px;
+
+  }
+
+  .stat__light,
+
+  .stat__dark {
+
+    font-size: 11px;
+
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .postCard__light,
+
+  .postCard__dark {
+
+    transition: none;
+
+  }
+
+}
+
+.videoContainer__light,
+
+.videoContainer__dark {
+
+  position: relative;
+
+  width: 100%;
+
+  margin-top: 12px;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+}
+
+.video__light,
+
+.video__dark {
+
+  width: 100%;
+
+  max-height: 400px;
+
+  object-fit: cover;
+
+  display: block;
+
+}
+
+.playButton__light,
+
+.playButton__dark {
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 56px;
+
+  height: 56px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  color: white;
+
+  font-size: 20px;
+
+  padding-left: 3px;
+
+  backdrop-filter: blur(10px);
+
+}
+
+

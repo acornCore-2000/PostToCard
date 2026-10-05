@@ -1,0 +1,172 @@
+.page {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  background: #f7f8fa;
+  color: #0f1419;
+  display: flex;
+  justify-content: center;
+  padding: 48px 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  color: #0f1419;
+}
+
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+}
+
+.input,
+.select {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 15px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fafafa;
+  color: #0f1419;
+  outline: none;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.input:focus,
+.select:focus {
+  border-color: #1d9bf0;
+  background: #ffffff;
+}
+
+.select {
+  cursor: pointer;
+}
+
+.button {
+  width: 100%;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 10px;
+  background: #0f1419;
+  color: #ffffff;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.button:hover {
+  opacity: 0.85;
+}
+
+.button:active {
+  opacity: 0.7;
+}
+
+
+.result {
+  width: auto;
+  display: inline-flex;
+ 
+}
+
+
+@media (min-width: 768px) {
+  .page {
+    padding: 72px 24px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .form {
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+  }
+
+  .input {
+    flex: 1;
+  }
+
+  .select {
+    width: auto;
+    min-width: 140px;
+  }
+
+  .button {
+    width: auto;
+    padding: 12px 24px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .page {
+    padding: 32px 16px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .form {
+    padding: 16px;
+  }
+}
+
+.resultWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.downloadButton {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 999px;
+  background: #007aff;
+  color: #ffffff;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+.downloadButton:hover {
+  opacity: 0.88;
+}
+
+.downloadButton:active {
+  transform: scale(0.97);
+}

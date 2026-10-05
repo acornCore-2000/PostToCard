@@ -1,0 +1,166 @@
+{
+    "code": 200,
+    "message": "OK",
+    "tweet": {
+        "url": "https://x.com/elonmusk/status/2104012335954440279",
+        "id": "2104012335954440279",
+        "text": "Yes 😂",
+        "raw_text": {
+            "text": "Yes 😂",
+            "display_text_range": [
+                0,
+                5
+            ],
+            "facets": []
+        },
+        "author": {
+            "screen_name": "elonmusk",
+            "url": "https://x.com/elonmusk",
+            "id": "44196397",
+            "followers": 241700335,
+            "following": 1411,
+            "likes": 249546,
+            "media_count": 4724,
+            "name": "Elon Musk",
+            "description": "http://Terafab.AI",
+            "raw_description": {
+                "text": "https://t.co/ZdBx5WABYx",
+                "facets": [
+                    {
+                        "type": "url",
+                        "indices": [
+                            0,
+                            23
+                        ],
+                        "original": "https://t.co/ZdBx5WABYx",
+                        "replacement": "http://Terafab.AI",
+                        "display": "Terafab.AI"
+                    }
+                ]
+            },
+            "location": "",
+            "banner_url": "https://pbs.twimg.com/profile_banners/44196397/1774145451",
+            "avatar_url": "https://pbs.twimg.com/profile_images/2103567689515954176/aR-Kjpp4_200x200.jpg",
+            "joined": "Tue Jun 02 20:12:29 +0000 2009",
+            "protected": false,
+            "website": null,
+            "verification": {
+                "verified": true,
+                "verified_at": null,
+                "type": "individual"
+            },
+            "avatar_color": null
+        },
+        "replies": 1688,
+        "retweets": 1418,
+        "likes": 20650,
+        "bookmarks": 322,
+        "quotes": 134,
+        "created_at": "Sun Sep 27 00:56:46 +0000 2026",
+        "created_timestamp": 1790470606,
+        "views": 2526683,
+        "is_note_tweet": false,
+        "community_note": null,
+        "lang": null,
+        "replying_to": null,
+        "replying_to_status": null,
+        "quote": {
+            "url": "https://x.com/TheRabbitHole/status/2103851621231001979",
+            "id": "2103851621231001979",
+            "text": "Occasional reminder to respect Twitter’s transition.\n\nIt’s 𝕏 now.\n\nHope this helps.",
+            "raw_text": {
+                "text": "Occasional reminder to respect Twitter’s transition.\n\nIt’s 𝕏 now.\n\nHope this helps. https://t.co/6Ss9rmkl7h",
+                "display_text_range": [
+                    0,
+                    83
+                ],
+                "facets": [
+                    {
+                        "type": "media",
+                        "indices": [
+                            84,
+                            107
+                        ],
+                        "id": "2103851617862942720",
+                        "display": "pic.x.com/6Ss9rmkl7h",
+                        "original": "https://t.co/6Ss9rmkl7h",
+                        "replacement": "https://x.com/TheRabbitHole/status/2103851621231001979/photo/1"
+                    }
+                ]
+            },
+            "author": {
+                "screen_name": "TheRabbitHole",
+                "url": "https://x.com/TheRabbitHole",
+                "id": "1485689970593468416",
+                "followers": 1108373,
+                "following": 1915,
+                "likes": 93559,
+                "media_count": 13475,
+                "name": "The Rabbit Hole",
+                "description": "Navigating the discourse",
+                "raw_description": {
+                    "text": "Navigating the discourse",
+                    "facets": []
+                },
+                "location": "Mars, PA",
+                "banner_url": "https://pbs.twimg.com/profile_banners/1485689970593468416/1651711479",
+                "avatar_url": "https://pbs.twimg.com/profile_images/1522017422550528001/6AceRKJQ_200x200.png",
+                "joined": "Mon Jan 24 19:05:23 +0000 2022",
+                "protected": false,
+                "website": {
+                    "url": "https://therabbithole84.substack.com/",
+                    "display_url": "therabbithole84.substack.com"
+                },
+                "verification": {
+                    "verified": true,
+                    "verified_at": null,
+                    "type": "individual"
+                },
+                "avatar_color": null
+            },
+            "replies": 213,
+            "retweets": 218,
+            "likes": 4462,
+            "bookmarks": 50,
+            "quotes": 70,
+            "created_at": "Sat Sep 26 14:18:08 +0000 2026",
+            "created_timestamp": 1790432288,
+            "possibly_sensitive": false,
+            "views": 2167914,
+            "is_note_tweet": false,
+            "community_note": null,
+            "lang": "en",
+            "replying_to": null,
+            "replying_to_status": null,
+            "media": {
+                "all": [
+                    {
+                        "type": "photo",
+                        "id": "2103851617862942720",
+                        "url": "https://pbs.twimg.com/media/HTJh5lbaAAARUz9.jpg?name=orig",
+                        "width": 1236,
+                        "height": 686
+                    }
+                ],
+                "photos": [
+                    {
+                        "type": "photo",
+                        "id": "2103851617862942720",
+                        "url": "https://pbs.twimg.com/media/HTJh5lbaAAARUz9.jpg?name=orig",
+                        "width": 1236,
+                        "height": 686
+                    }
+                ]
+            },
+            "source": "Twitter for iPhone",
+            "twitter_card": "summary_large_image",
+            "color": null,
+            "provider": "twitter",
+            "reposted_by": null
+        },
+        "source": "Twitter for iPhone",
+        "color": null,
+        "provider": "twitter",
+        "reposted_by": null
+    }
+}

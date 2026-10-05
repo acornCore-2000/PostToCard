@@ -1,0 +1,256 @@
+.replyCard__light,
+.replyCard__dark {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.replyCard__light {
+  background: #ffffff;
+  border: 1px solid rgba(60, 60, 67, 0.16);
+  color: #1c1c1e;
+}
+
+.replyCard__dark {
+  background: #232326;
+  border: 1px solid rgba(235, 235, 245, 0.12);
+  color: #f5f5f7;
+}
+
+/* ---------- Header ---------- */
+.replyHeader__light,
+.replyHeader__dark {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  gap: 6px;
+}
+
+.replyAvatar__light,
+.replyAvatar__dark {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.replyAvatar__light {
+  background: #d1d1d6;
+}
+
+.replyAvatar__dark {
+  background: #3a3a3c;
+}
+
+.replyAuthorInfo__light,
+.replyAuthorInfo__dark {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.replyAuthor__light,
+.replyAuthor__dark {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 12.5px;
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.replyVerifiedGovernment__light,
+.replyVerifiedGovernment__dark,
+.replyVerifiedIndividual__light,
+.replyVerifiedIndividual__dark {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  flex: 0 0 auto;
+  margin-left: 3px;
+}
+
+.replyVerifiedGovernment__light {
+  color: #8e8e93 !important;
+  fill: #8e8e93 !important;
+}
+
+.replyVerifiedGovernment__dark {
+  color: #98989d !important;
+  fill: #98989d !important;
+}
+
+.replyVerifiedIndividual__light,
+.replyVerifiedIndividual__dark {
+  color: #007aff !important;
+  fill: #007aff !important;
+}
+
+.replyScreenName__light,
+.replyScreenName__dark {
+  font-family: "Inter", sans-serif;
+  font-size: 11.5px;
+  font-weight: 400;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.replyScreenName__light {
+  color: #8e8e93;
+}
+
+.replyScreenName__dark {
+  color: #98989d;
+}
+
+/* ---------- Text ---------- */
+.replyText__light,
+.replyText__dark {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.replyText__light[lang="fa"],
+.replyText__light[lang="ar"],
+.replyText__dark[lang="fa"],
+.replyText__dark[lang="ar"] {
+  font-family: "Vazirmatn", "Noto Color Emoji", sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+.replyText__light[lang="en"],
+.replyText__dark[lang="en"] {
+  font-family: "Inter", sans-serif;
+  direction: ltr;
+  text-align: left;
+}
+
+.replyMore__light,
+.replyMore__dark {
+  font-size: 12px;
+  font-weight: 500;
+  color: #8e8e93;
+  user-select: none;
+}
+
+/* ---------- Media ---------- */
+.replyImage__light,
+.replyImage__dark {
+  width: 100%;
+  max-width: 100%;
+  max-height: 140px;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 2px;
+}
+
+.replyImage__light {
+  background: #e5e5ea;
+}
+
+.replyImage__dark {
+  background: #3a3a3c;
+}
+
+.replyVideo__light,
+.replyVideo__dark {
+  position: relative;
+  width: 100%;
+  max-height: 140px;
+  margin-top: 2px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.replyVideo__light img,
+.replyVideo__dark img {
+  width: 100%;
+  height: 100%;
+  max-height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.replyPlayButton__light,
+.replyPlayButton__dark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+  font-size: 13px;
+  padding-left: 2px;
+  backdrop-filter: blur(8px);
+}
+
+/* ---------- Extra-small phones ---------- */
+@media (max-width: 340px) {
+  .replyCard__light,
+  .replyCard__dark {
+    padding: 8px;
+    gap: 5px;
+  }
+
+  .replyAvatar__light,
+  .replyAvatar__dark {
+    width: 20px;
+    height: 20px;
+    flex-basis: 20px;
+  }
+
+  .replyAuthor__light,
+  .replyAuthor__dark {
+    font-size: 12px;
+  }
+
+  .replyScreenName__light,
+  .replyScreenName__dark {
+    font-size: 11px;
+  }
+
+  .replyText__light,
+  .replyText__dark {
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .replyCard__light,
+  .replyCard__dark {
+    transition: none;
+  }
+}
+
+

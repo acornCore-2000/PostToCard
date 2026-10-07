@@ -38,7 +38,7 @@ export default function HomePage() {
       await document.fonts.ready;
 
       const node = cardRef.current;
-      const options = { pixelRatio: 3, quality: 1, cacheBust: true };
+      const options = { pixelRatio: 3, quality: 1,};
 
       await toPng(node, options);
       const dataUrl: string = await toPng(node, options);

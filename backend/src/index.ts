@@ -5,7 +5,7 @@ import tweetRoute from "./routes/tweet.routes.js";
 
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 dotenv.config();
 
 app.use(cors());

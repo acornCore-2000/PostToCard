@@ -19,7 +19,7 @@ export default function HomePage() {
     e.preventDefault();
     try {
       setIsLoading(true);
-      const response = await axios.get(`http://localhost:5000/api/tweet-info`, {
+      const response = await axios.get(`https://sonnet-timely-polar-bear.abasthan.app/api/tweet-info`, {
         params: { url: link },
       });
 

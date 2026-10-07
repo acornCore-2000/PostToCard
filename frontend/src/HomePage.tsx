@@ -3,8 +3,6 @@ import axios from "axios";
 import PostCard from "./components/PostCard";
 import styles from "./HomePage.module.css";
 import type { TweetType } from "./components/PostCard";
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
 import { toPng } from "html-to-image";
 
 export default function HomePage() {
@@ -12,12 +10,13 @@ export default function HomePage() {
   const [theme, setTheme] = useState("");
   const [tweet, setTweet] = useState<TweetType | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [showTweet, setShowTweet] = useState(false);
+  const [cardReady, setCardReady] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
+      setCardReady(false);
       setIsLoading(true);
       const API_URL = import.meta.env.VITE_API_URL;
       const response = await axios.get(`${API_URL}/api/tweet-info`, {
@@ -26,8 +25,6 @@ export default function HomePage() {
 
       if (response.data.success) {
         setTweet(response.data.message);
-        setShowTweet(true);
-        console.log(response.data.message);
       }
     } catch (error) {
       console.error(error);
@@ -36,19 +33,24 @@ export default function HomePage() {
     }
   };
 
-  const handleDownload = async ()=>{
-if (cardRef.current){
-  const dataUrl = await toPng(cardRef.current, {
-    pixelRatio:3, 
-    quality:1
-  });
-  
-   const link = document.createElement('a');
-      link.download = 'post.png';
-      link.href = dataUrl;
-      link.click();
-}
-  }
+  const handleDownload = async () => {
+    if (cardRef.current) {
+      await document.fonts.ready;
+
+      const node = cardRef.current;
+      const options = { pixelRatio: 3, quality: 1, cacheBust: true };
+
+      await toPng(node, options);
+      const dataUrl: string = await toPng(node, options);
+
+      const a = document.createElement("a");
+      a.download = "post.png";
+      a.href = dataUrl;
+      a.click();
+    }
+  };
+
+  const showSpinner = isLoading || (tweet !== null && !cardReady);
 
   return (
     <main className={styles.page}>
@@ -81,23 +83,36 @@ if (cardRef.current){
           </button>
         </form>
 
-        {showTweet && tweet && !isLoading ? (
-          <div className={styles.resultWrapper}>
-  <div className={styles.result} ref={cardRef}>
-    <PostCard tweet={tweet} theme={theme} />
-  </div>
-  <button
-    type="button"
-    className={styles.downloadButton}
-    onClick={handleDownload}
-  >
-    Download
-  </button>
-</div>
-        ) : (
-          <div>
-            <Skeleton width={500} />
-            <Skeleton height={500} />
+        {showSpinner && <div className={styles.spinner} />}
+
+        {tweet && !isLoading && (
+          <div
+            className={styles.resultWrapper}
+            style={
+              cardReady
+                ? undefined
+                : {
+                    position: "absolute",
+                    visibility: "hidden",
+                    pointerEvents: "none",
+                  }
+            }
+          >
+            <div className={styles.result} ref={cardRef}>
+              <PostCard
+                tweet={tweet}
+                theme={theme}
+                onReadyChange={setCardReady}
+              />
+            </div>
+            <button
+              type="button"
+              className={styles.downloadButton}
+              onClick={handleDownload}
+              disabled={!cardReady}
+            >
+              Download
+            </button>
           </div>
         )}
       </div>

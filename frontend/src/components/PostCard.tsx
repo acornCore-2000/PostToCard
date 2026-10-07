@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaHeart, FaRegBookmark, FaRetweet, FaRegEye } from "react-icons/fa6";
 import { VscVerifiedFilled } from "react-icons/vsc";
 import styles from "./PostCard.module.css";
@@ -148,13 +148,31 @@ function formatTweetText(text: string) {
 }
 
 export default function PostCard({
+
+   
+
   tweet,
   theme,
+  onReadyChange,
 }: {
   tweet: TweetType;
   theme: string;
+  onReadyChange?: (ready: boolean) => void;
 }) {
   const qrRef = useRef<HTMLDivElement>(null);
+  const avatarRef = useRef<HTMLImageElement>(null);
+  const mediaRef = useRef<HTMLImageElement>(null);
+
+  const [avatarLoaded, setAvatarLoaded] = useState(false);
+  const [mediaLoaded, setMediaLoaded] = useState(false);
+  const [replyLoaded, setReplyLoaded] = useState(false);
+
+  const firstMedia = tweet.media.all[0];
+  const hasMedia =
+    firstMedia?.type === "photo" || firstMedia?.type === "video";
+
+  const ready =
+    avatarLoaded && mediaLoaded && (!tweet.quote || replyLoaded);
 
   useEffect(() => {
     if (tweet.provider !== "twitter") return;
@@ -205,13 +223,29 @@ export default function PostCard({
     }
   }, [tweet.url, tweet.provider, theme]);
 
+  useEffect(() => {
+    setAvatarLoaded(avatarRef.current?.complete ?? false);
+    setMediaLoaded(hasMedia ? (mediaRef.current?.complete ?? false) : true);
+  }, [tweet, hasMedia]);
+
+  useEffect(() => {
+    onReadyChange?.(ready);
+  }, [ready, onReadyChange]);
+
   return (
-    <div className={styles[`postCard__${theme}`]}>
+    <div
+      className={styles[`postCard__${theme}`]}
+      style={{ visibility: ready ? "visible" : "hidden" }}
+    >
       <div className={styles[`header__${theme}`]}>
         <img
+          key={tweet.author.avatar_url}
+          ref={avatarRef}
           src={tweet.author.avatar_url}
           alt="avatar"
           className={styles[`avatar__${theme}`]}
+          onLoad={() => setAvatarLoaded(true)}
+          onError={() => setAvatarLoaded(true)}
         />
 
         <div className={styles[`authorInfo__${theme}`]}>
@@ -262,23 +296,28 @@ export default function PostCard({
         )}
       </p>
 
-      {tweet.media.all[0]?.type === "photo" && (
+      {firstMedia?.type === "photo" && (
         <img
+          key={firstMedia.url}
+          ref={mediaRef}
           className={styles[`image__${theme}`]}
-          src={tweet.media.all[0].url}
+          src={firstMedia.url}
           alt="Post image"
+          onLoad={() => setMediaLoaded(true)}
+          onError={() => setMediaLoaded(true)}
         />
       )}
 
-      {tweet.media.all[0]?.type === "video" && (
+      {firstMedia?.type === "video" && (
         <div className={styles[`videoContainer__${theme}`]}>
           <img
+            key={firstMedia.thumbnail_url ?? firstMedia.url}
+            ref={mediaRef}
             className={styles[`video__${theme}`]}
-            src={
-              tweet.media.all[0].thumbnail_url ??
-              tweet.media.all[0].url
-            }
+            src={firstMedia.thumbnail_url ?? firstMedia.url}
             alt="Video thumbnail"
+            onLoad={() => setMediaLoaded(true)}
+            onError={() => setMediaLoaded(true)}
           />
 
           <div className={styles[`playButton__${theme}`]}>
@@ -291,6 +330,7 @@ export default function PostCard({
         <TweetReply
           reply={tweet.quote}
           theme={theme}
+          onReadyChange={setReplyLoaded}
         />
       )}
 

@@ -17,17 +17,9 @@ Live Demo: post-to-card.netlify.app
 
 ## Screenshots
 
-### Main Page
-
-![PostToCard Main Page](frontend/public/mainpage.png)
-
-### Dark Mode
-
-![PostToCard Dark Mode](frontend/public/dark_mode.png)
-
-### Light Mode
-
-![PostToCard Light Mode](frontend/public/light_mode.png)
+- [Main Page](frontend/public/mainpage.png)
+- [Light Mode](frontend/public/light_mode.png)
+- [Dark Mode](frontend/public/dark_mode.png)
 
 ## Tech Stack
 

@@ -1,7 +1,6 @@
 # PostToCard
 
 Turn X (Twitter) posts into shareable image cards.
-
 PostToCard is a web application that takes an X (Twitter) post URL and transforms the post into a visually styled card that can be downloaded as an image.
 
 ## Features

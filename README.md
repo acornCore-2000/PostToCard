@@ -15,11 +15,17 @@ Live Demo: post-to-card.netlify.app
 - **Emoji Support:** Render emojis in post content.
 - **Multilingual Content:** Support for English and Persian text.
 
+
 ## Screenshots
 
-- [Main Page](frontend/public/mainpage.png)
-- [Light Mode](frontend/public/light_mode.png)
-- [Dark Mode](frontend/public/dark_mode.png)
+### Main Page
+<img src="https://github.com/acornCore-2000/PostToCard/blob/main/frontend/public/screenshots/mainpage.png?raw=true" width="200" alt="Main Page" />
+
+### Light Mode
+<img src="https://github.com/acornCore-2000/PostToCard/blob/main/frontend/public/screenshots/light_mode.png?raw=true" width="200" alt="Light Mode" />
+
+### Dark Mode
+<img src="https://github.com/acornCore-2000/PostToCard/blob/main/frontend/public/screenshots/dark_mode.png?raw=true" width="200" alt="Dark Mode" />
 
 ## Tech Stack
 
